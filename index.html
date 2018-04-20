@@ -15,6 +15,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animated modal -->
+    <link href="js/animated/css/normalize.min.css">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -95,11 +98,13 @@
                             </span>
                         </a>
                     </li>
+<!--
                     <li class="list-inline-item">
                         <a href="https://sourcerer.io/itepifanio" target="_blank">
                             <img class="rounded-circle" src="img/sourcerer.png" width="50px" height="50px"/>
                         </a>
                     </li>
+-->
                     <li class="list-inline-item">
                         <a href="http://twitter.com/epifanium" target="_blank">
                             <span class="fa-stack fa-lg">
@@ -308,7 +313,9 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <img src="img/diagnosticoCatarata.jpg" alt="Diagnóstico de catarata" class="img-fluid">
+                        <a href="#retsus-modal" id="retsus"> Call retsus </a>
+                        <img src="img/retsus.png" alt="Retsus" class="img-fluid">
+
                         <div class="caption">
                             Retsus
                         </div>
@@ -352,6 +359,19 @@
         </section>
         <!-- end awards -->
     </div>
+    
+    <!-- Modais -->
+    <!-- Modal retsus -->
+    <div id="retsus-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div id="btn-close-modal" class="close-retsus-modal"> 
+            CLOSE MODAL
+        </div>
+            
+        <div class="modal-content">
+            AAAAAA
+        </div>
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -362,7 +382,13 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
-
+    
+    <!-- Modal js -->
+    <script src="js/animated/js/animatedModal.min.js"></script>   
+    
+    <script>
+        $("#retsus").animatedModal();
+    </script>
 </body>
 
 </html>
